@@ -10,7 +10,7 @@ Spec::Runner.configure do |config|
   config.before(:all) do
     path = [File.dirname(__FILE__), 'app_root', 'config', 'enumerations.yml'] * '/'
     File.stub!(:join).and_return(path)
-    load File.dirname(__FILE__) + '/../lib/simple_enumerations.rb'
+    load File.dirname(__FILE__) + '/../lib/simple_enumerations/simple_enumerations.rb'
     Rails.cache.delete('_simple_enumerations_')
   end
 end

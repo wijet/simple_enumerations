@@ -36,7 +36,7 @@ describe Enumeration do
     end
   end
   
-  describe "generated instance's methods" do
+  describe "generated instance methods" do
     it "should return true if enumeration has particular value" do
       enum = Enumeration.new('red')
 
@@ -58,7 +58,7 @@ describe Wijet::SimpleEnumerations::ClassMethods do
       @group.policy.should be_a(Enumeration)
     end
     
-    it "should generate writter methods which assign enumeration value" do
+    it "should generate writer methods which assign enumeration value" do
       @group.policy = :open
       @group.policy.should == Enumeration.new('open')
     end

@@ -7,7 +7,7 @@ ActiveRecord::Schema.define(:version => 0) do
     t.string :color
   end
   
-  %w(open close close secret).each { |policy| Group.create(:policy => policy) }
+  %w(open closed closed secret).each { |policy| Group.create(:policy => policy) }
   
   %w(red green).each { |color| execute("INSERT INTO cars(color) VALUES('#{color}')") }
 end

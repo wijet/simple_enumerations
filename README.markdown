@@ -4,7 +4,12 @@ SimpleEnumerations
 Provides simple and clean enumerations system for rails apps.
 Enumerations are defined in one file and stored in the database as strings.
 
-USAGE
+Installation
+============
+
+    script/plugin install git://github.com/wijet/simple_enumerations.git
+
+Usage
 =====
 
     # config/enumerations.yml

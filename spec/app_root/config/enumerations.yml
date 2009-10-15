@@ -1,0 +1,11 @@
+policy:
+  - open
+  - close
+  - secret
+color:
+  - red
+  - green
+  - blue
+  - yellow
+  - light green
+  

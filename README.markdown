@@ -2,7 +2,7 @@ Simple Enumerations
 ==================
 
 Provides simple and clean enumerations system for rails apps.
-Enumerations are defined in one file and stored in the database as strings.
+Enumerations are defined in one file and stored in the database, as strings.
 
 Installation
 ============
@@ -15,7 +15,7 @@ Usage
     # config/enumerations.yml
     policy:
       - open
-      - close
+      - closed
       - by approval
 
     # app/models/group.rb
@@ -23,30 +23,30 @@ Usage
       has_enumerated :policy
     end
 
-You can generate sample enumeration file by running 
+You can generate sample enumerations file by running 
 
     script/generate enumerations
 
 Plugin generates following methods:
 
     @group.policy.open?
-    @group.policy.close?
+    @group.policy.closed?
     @group.policy.by_approval?
     
 Fetching enumerations 
 
-    Enumeration[:policy] # => ['open', 'close', 'by approval']
-    Enumeration.all # => {'policy' => ['open', 'close', 'by approval']}
+    Enumeration[:policy] # => ['open', 'closed', 'by approval']
+    Enumeration.all # => {'policy' => ['open', 'closed', 'by approval']}
     
 Using enumeration in case statements is very easy
 
     case @group.policy
       when :open then ...
-      when :close then ...
+      when :closed then ...
       when :by_approval then ...
     end
 
-Plugin provides helper for creating select boxes
+Plugin includes helper for creating select boxes
 
     f.select_enumeration :policy
 

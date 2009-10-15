@@ -1,6 +1,6 @@
 policy:
   - open
-  - close
+  - closed
   - secret
 color:
   - red

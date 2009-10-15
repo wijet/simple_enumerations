@@ -3,7 +3,7 @@ include Wijet::SimpleEnumerations::EnumerationString
 
 describe Enumeration do
   before :all do
-    @policies = %w(open close secret)
+    @policies = %w(open closed secret)
     @colors = ['red', 'green', 'blue', 'yellow', 'light green']
   end
   
@@ -24,7 +24,7 @@ describe Enumeration do
     end
     
     describe "generating instance methods" do
-      it "should generate instance methods, named in format '#\{value\}?', for every enumeration value" do
+      it "should generate instance methods, named in format '#\{value\}?'" do
         (@policies + @colors).each do |value|
           Enumeration.new.should respond_to("#{value.gsub(/[^[:alnum:]]/, '_')}?")
         end
@@ -37,11 +37,10 @@ describe Enumeration do
   end
   
   describe "generated instance's methods" do
-    it "should return true if enumeration's value is equal to" do
+    it "should return true if enumeration has particular value" do
       enum = Enumeration.new('red')
 
-      enum.should == 'red'
-      enum.should be_red
+      enum.should be_red # calls enum.red?
       enum.should_not be_light_green
       enum.should_not be_open
     end

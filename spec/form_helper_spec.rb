@@ -13,14 +13,14 @@ describe Wijet::FormHelper do
   
   it "should generate selectbox for enumeration" do
     render_select.should == '<select id="group_policy" name="group[policy]"><option value="open">open</option>
-<option value="close">close</option>
+<option value="closed">closed</option>
 <option value="secret">secret</option></select>'
   end
   
   it "should generate selectbox for enumeration with selected value" do
     @group = mock_model(Group, :policy => :open)
     render_select.should == '<select id="group_policy" name="group[policy]"><option value="open" selected="selected">open</option>
-<option value="close">close</option>
+<option value="closed">closed</option>
 <option value="secret">secret</option></select>'
   end
 end

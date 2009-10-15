@@ -6,6 +6,11 @@ Enumerations are defined in one file and stored in the database, as strings.
 
 Installation
 ============
+Install the gem from gemcutter:
+
+    sudo gem install simple_enumerations -s http://gemcutter.org
+    
+or install as a plugin:
 
     script/plugin install git://github.com/wijet/simple_enumerations.git
 

@@ -51,10 +51,12 @@ Plugin includes helper for creating select boxes
     f.select_enumeration :policy
 
 REQUIREMENTS
+============
 
 rails >= 2.1
 
 LICENSE
+=======
 
 (The MIT License)
 

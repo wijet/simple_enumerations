@@ -1,4 +1,4 @@
-SimpleEnumerations
+Simple Enumerations
 ==================
 
 Provides simple and clean enumerations system for rails apps.

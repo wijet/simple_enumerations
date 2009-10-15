@@ -7,7 +7,7 @@ module Wijet
     end
     
     module ClassMethods
-      def has_enumerated(name, options = {})
+      def has_enumerated(name)
         name = name.to_s
         
         define_method("#{name}=") do |value|
